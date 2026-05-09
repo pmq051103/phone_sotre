@@ -1,0 +1,237 @@
+
+.od-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin: var(--space-xl) 0 var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.od-title{
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.muted{ color: var(--text-muted); font-weight: 700; }
+.dot{ color: var(--text-muted); font-weight: 900; margin: 0 6px; }
+
+.od-layout{
+  display:grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: var(--space-lg);
+  align-items:start;
+}
+
+.od-card{ overflow: hidden; }
+
+.od-card-head{
+  padding: var(--space-md) var(--space-lg);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: rgba(17,24,39,0.02);
+}
+
+.od-card-head h2{
+  margin:0;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.od-card-body{
+  padding: var(--space-lg);
+}
+
+/* Items list */
+.od-items{
+  display:grid;
+  gap: var(--space-md);
+}
+
+.od-item{
+  display:grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: var(--space-md);
+  align-items:center;
+  padding: var(--space-md);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-md);
+  background: #fff;
+  transition: all .2s ease;
+}
+
+.od-item:hover{
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.od-thumb{
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-md);
+  overflow:hidden;
+  background: #f3f4f6;
+  border: 1px solid rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.od-thumb img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  display:block;
+}
+
+.od-info{
+  min-width: 0;
+  display:grid;
+  gap: 6px;
+}
+
+.od-name{
+  font-weight: 900;
+  color: var(--text-primary);
+  text-decoration:none;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+
+.od-name:hover{ color: var(--primary-color); }
+
+.od-meta{
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 13px;
+  display:flex;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.od-line-total{
+  font-weight: 900;
+  color: var(--danger-color);
+  white-space: nowrap;
+}
+
+/* Right */
+.od-sticky{
+  position: sticky;
+  top: 90px;
+}
+
+.od-kv{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+.od-kv:last-child{ border-bottom: none; }
+
+.od-pay{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+/* Pills */
+.status-pill,
+.pay-pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  white-space: nowrap;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+.status-pending{ background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.25); color: #92400e; }
+.status-processing{ background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.25); color: #3730a3; }
+.status-shipping{ background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.25); color: #065f46; }
+.status-completed{ background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.25); color: #065f46; }
+.status-cancelled{ background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.25); color: #991b1b; }
+
+.pay-paid{ background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.25); color: #065f46; }
+.pay-unpaid{ background: rgba(239,68,68,0.10); border-color: rgba(239,68,68,0.22); color: #991b1b; }
+
+/* Shipping info */
+.od-ship{
+  display:grid;
+  gap: 12px;
+}
+
+.od-ship-row{
+  display:grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+  align-items:start;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.od-ship-row i{
+  color: var(--primary-color);
+  margin-top: 2px;
+}
+
+/* Totals */
+.sum-row{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 10px 0;
+  color: var(--text-secondary);
+  font-weight: 800;
+}
+.sum-row strong{ color: var(--text-primary); }
+
+.sum-discount{ color: var(--accent-color) !important; }
+
+.sum-divider{
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin: 8px 0;
+}
+
+.sum-total{
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+.sum-price{
+  color: var(--danger-color);
+  font-size: 1.5rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.od-foot{
+  margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .od-layout{ grid-template-columns: 1fr; }
+  .od-sticky{ position: static; }
+}
+@media (max-width: 576px){
+  .od-item{ grid-template-columns: 70px 1fr; }
+  .od-line-total{ grid-column: 1 / -1; text-align:right; }
+}
