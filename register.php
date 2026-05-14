@@ -25,8 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (empty($email)) {
         $errors[] = 'Vui lòng nhập email';
-    } elseif (!isValidEmail($email)) {
-        $errors[] = 'Email không hợp lệ';
     }
     
     if (empty($password)) {
